@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
     <div class="nav-buttons">
       <button @click="goToDay1">第一天学习</button>
+      <button @click="goToDay2">第二天学习</button>
     </div>
   </div>
 </template>
@@ -16,6 +17,9 @@ export default {
   methods: {
     goToDay1() {
       this.$router.push('/day1')
+    },
+    goToDay2() {
+      this.$router.push('/day2')
     }
   }
 }
