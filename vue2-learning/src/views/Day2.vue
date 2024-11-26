@@ -10,6 +10,8 @@
       <span>{{ sum }}</span>
       <br>
       <button @click="changeNum">change num</button>
+      <br>
+      <input type="text" v-model="text">
     </div>
   </div>
 </template>
@@ -33,18 +35,24 @@ export default {
   data() {
     return {
       num1: 0,
-      num2: 0
+      num2: 0,
+      text: 'hello'
+    }
+  },
+  watch: {
+    text(newVal, oldVal) {
+      console.log(newVal, oldVal);
     }
   },
   computed: {
     sum: {
       
         get() {
-            return this.num1 + this.num2;
+            return Number(this.num1) + Number(this.num2);
         },
         set(value) {
-            this.num1 = 999;
-            this.num2 = 999;
+            this.num1 = value;
+            this.num2 = value;
         }       
     
     }
@@ -52,7 +60,7 @@ export default {
   methods: {
     changeNum() {
        //how to change sum:sum2:set
-       this.sum=1;
+       this.sum=999;
     }
   }
   
