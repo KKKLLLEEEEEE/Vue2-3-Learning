@@ -52,7 +52,6 @@ export default {
         this.$refs.inputRef.focus()
       })
     }
-    
   }
   
 }
