@@ -1,18 +1,25 @@
 <template>
   <div class="day6">
-    <h1>Day 6</h1>
-    <p>Welcome to Day 6</p>
+    <router-link to="/">homepage</router-link>
+    <br>
+    <router-link :to="{ path: '/day6', query: { game: 'Genshin Impact' }}">Genshin Impact</router-link>
+    <h1 > from field : {{ game }} </h1>
+    <h1>from $route.query.args : {{ $route.query.game }} </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DaySixPage'
+  name: 'DaySixPage',
+  data() {
+    return {
+      game: ''
+    }
+  },
+  created() {
+    const game = this.$route.query.game;
+    this.game = game;
+  }
 }
 </script>
 
-<style scoped>
-.day6 {
-  padding: 20px;
-}
-</style> 

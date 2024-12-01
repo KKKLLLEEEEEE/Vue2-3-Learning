@@ -14,6 +14,7 @@
       <button @click="$router.push('/day10')">Day 10</button>
       <button @click="$router.push('/day11')">Day 11</button>
       <button @click="$router.push('/day12')">Day 12</button>
+      <button @click="$router.push('/not-found')">Not Found</button>
     </div>
   </div>
 </template>

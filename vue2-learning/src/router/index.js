@@ -13,6 +13,7 @@ import Day9 from '../views/Day9.vue'
 import Day10 from '../views/Day10.vue'
 import Day11 from '../views/Day11.vue'
 import Day12 from '../views/Day12.vue'
+import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -82,9 +83,15 @@ const routes = [
     path: '/day12',
     name: 'day12',
     component: Day12
+  },
+  {
+    path: '*',
+    name: 'not-found',
+    component: NotFound
   }
 ]
 
 export default new VueRouter({
-  routes: routes
+  routes: routes,
+  mode: 'history'
 }) 
